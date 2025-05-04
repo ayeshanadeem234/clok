@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Clockora</title>
+  <script>
+    let a;
+    let currentDate;
+    let currentTime;
+    setInterval(() => {
+      a = new Date();
+      currentDate = a.toLocaleDateString();
+      let hours = a.getHours() % 12 || 12; // Convert to 12-hour format
+      let minutes = a.getMinutes().toString().padStart(2, '0'); // Add leading zero
+      let seconds = a.getSeconds().toString().padStart(2, '0'); // Add leading zero
+      let ampm = a.getHours() >= 12 ? 'PM' : 'AM'; // Determine AM/PM
+      currentTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+      document.getElementById('date').innerHTML = currentDate;
+      document.getElementById('time').innerHTML = currentTime;
+    }, 1000);
+  </script>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div class="navbar">
+    <img src="https://i.postimg.cc/g0rLcCnF/Chat-GPT-Image-Apr-18-2025-09-26-12-PM.png" alt="logo" width="100" height="100">
+    <p>Home</p>
+    <p>About us</p>
+    <p>Contact us</p>
+  </div>
+  <div class="box">
+    <h1>This is Current Time and Date:</h1>
+    <p1 id="time"></p1>
+    <p2 id="date"></p2>
+    <script class="js"></script>
+  </div>
+</body>
+</html>

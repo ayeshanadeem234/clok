@@ -1,0 +1,39 @@
+body{
+    background-color: #1e1e1e;
+    .navbar{
+        display:flexbox;
+        
+    }
+}
+
+.navbar {
+        display: flex;
+        align-items: center; /* aligns vertically */
+        gap: 60px; /* adds space between image and text */
+        padding: 10px;
+        color:white;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 20px;
+}
+.box{
+    border: 40px transparent  solid;
+    border-image:url('https://i.postimg.cc/VkQKCFXV/Chat-GPT-Image-Apr-19-2025-03-28-01-AM.png') 30% round;
+    margin:30px;
+    padding :30px;
+    color:white;
+    /* background-color: white; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    p1{
+        padding: 30px;
+        margin: 30px;
+        font-size: 40px;
+    }
+    p2{
+        padding: 30px;
+        margin: 30px;
+        font-size: 40px;
+    }
+    
+}     
